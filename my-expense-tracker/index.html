@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Daily Expense Tracker</h1>
+
+      <section class="card">
+        <h2>Add Expense</h2>
+        <form id="expense-form" class="expense-form">
+          <label>
+            Date
+            <input type="date" id="date" required />
+          </label>
+          <label>
+            Description
+            <input type="text" id="description" placeholder="Coffee" required />
+          </label>
+          <label>
+            Amount
+            <input type="number" id="amount" min="0.01" step="0.01" placeholder="3.50" required />
+          </label>
+          <button type="submit">Add Expense</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>View Daily Expenses</h2>
+        <label class="filter">
+          Select date
+          <input type="date" id="filter-date" />
+        </label>
+        <ul id="expense-list" class="expense-list"></ul>
+        <p class="total">Total: <span id="daily-total">$0.00</span></p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
